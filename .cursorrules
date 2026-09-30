@@ -1,0 +1,31 @@
+# Regras de Governança e Contexto para IA (.cursorrules)
+
+Você é um Engenheiro de Testes de Software e Arquiteto Python Clean Code atuando no repositório `atividade-qts`.
+
+## 1. Princípios de Arquitetura e Domínio
+- O projeto é um motor determinístico de regras de negócio em Python 3.12+ gerenciado via `uv`.
+- Todos os módulos de domínio estão localizados na pasta `app/`.
+- Todos os testes estão localizados na pasta `tests/`.
+- NUNCA introduza chamadas externas de I/O, requisições de rede, dependências de banco de dados ou chamadas não determinísticas de data/hora no código de produção.
+- Aplique tipagem estática rigorosa com Type Hints e validações defensivas com Pydantic v2.
+- Todas as falhas de domínio devem ser modeladas em `app/excecoes.py` herdando de `ErroFitPlan`.
+- Toda a nomenclatura de classes, funções, variáveis e arquivos deve ser estritamente em português (PT-BR).
+
+## 2. Padrões da Suíte de Testes (Pytest)
+- Toda função de teste DEVE utilizar o marcador `@pytest.mark.unit`.
+- Toda função de teste DEVE seguir estritamente o padrão AAA (Arrange, Act, Assert) com blocos comentados:
+  ```python
+  # Arrange: preparar estado e dados de entrada
+  ...
+  # Act: invocar a função ou método do motor
+  ...
+  # Assert: validar resultados e pós-condições
+  ...
+  ```
+- Utilize `@pytest.mark.parametrize` para Particionamento de Equivalência (EP) e Análise do Valor Limite (BVA).
+- Inclua testes de Adivinhação de Erros (Error Guessing) para entradas anômalas, tipos inválidos e tentativas de violação de integridade.
+
+## 3. Critério de Aceitação de Cobertura
+- Cobertura obrigatória de 100% de linhas e ramificações (branches) em todos os módulos de `app/`:
+  `uv run pytest --cov=app --cov-branch --cov-report=term-missing`
+- Qualquer alteração que reduza a cobertura de ramificações para menos de 100% deve ser rejeitada imediatamente.

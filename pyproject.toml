@@ -1,0 +1,39 @@
+[project]
+name = "atividade-qts"
+version = "0.1.0"
+description = "FitPlan - Sistema de Gestão de Planos de Academia - Engenharia de Testes de Software (QTS)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.10.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-cov>=6.0.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-v --cov=app --cov-branch --cov-report=term-missing --cov-report=html"
+markers = [
+    "unit: testes unitarios de regras de negocio",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+
+[tool.coverage.run]
+branch = true
+omit = [
+    "*/__init__.py",
+]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
