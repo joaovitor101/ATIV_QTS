@@ -7,7 +7,7 @@ from app.academia import AvaliadorAcademia
 @pytest.mark.parametrize(
     "valor_base, dependentes, cupom_desconto, valor_dependente, esperado",
     [
-        (100.0, 0, 0.0, 50.0, 100.0),
+        (100.0, 1, 0.0, 50.0, 150.0),
         (100.0, 2, 0.0, 50.0, 200.0),
         (200.0, 1, 10.0, 50.0, 225.0),
         (150.0, 3, 20.0, 50.0, 240.0),
@@ -22,6 +22,7 @@ def test_calcular_mensalidade_sucesso(valor_base, dependentes, cupom_desconto, v
     # Assert
     assert resultado == esperado
 
+# ================= Testes parametrizados =====================
 
 @pytest.mark.unit
 @pytest.mark.parametrize(
