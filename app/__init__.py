@@ -1,3 +1,4 @@
-"""Módulo principal do FitPlan - Sistema de Planos de Academia."""
+"""Pacote app - Sistema FitPlan Simplificado."""
+from app.academia import AvaliadorAcademia
 
-__version__ = "1.0.0"
+__all__ = ["AvaliadorAcademia"]
