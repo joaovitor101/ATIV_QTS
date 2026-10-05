@@ -6,7 +6,7 @@ O **FitPlan** é uma aplicação simples para calcular o valor da mensalidade de
 
 ---
 
-## 💡 Sobre o Projeto
+## Sobre o Projeto
 
 O foco principal do trabalho é a aplicação prática de técnicas de testes unitários:
 
@@ -17,7 +17,7 @@ O foco principal do trabalho é a aplicação prática de técnicas de testes un
 
 ---
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```text
 ATIV_QTS/
@@ -35,7 +35,7 @@ ATIV_QTS/
 
 ---
 
-## 🚀 Como Rodar o Projeto
+## Como Rodar o Projeto
 
 O projeto utiliza o **uv** para gerenciar dependências e o ambiente virtual.
 
@@ -57,7 +57,7 @@ uv run pytest --cov=app --cov-branch --cov-report=term-missing
 
 ---
 
-## 📋 Regras Resumidas
+## Regras Resumidas
 
 * **Mensalidade Base**: de R$ 60,00 a R$ 1.000,00.
 * **Dependentes**: de 0 a 5 dependentes (R$ 50,00 por dependente).

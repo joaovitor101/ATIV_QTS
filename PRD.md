@@ -4,7 +4,7 @@ O **FitPlan** é um módulo simples e direto para cálculo de mensalidades de ac
 
 ---
 
-## 🎯 Do que se trata o projeto?
+## Do que se trata o projeto?
 
 O objetivo do sistema é calcular quanto um aluno vai pagar na mensalidade da academia levando em conta dependentes e descontos, e depois indicar em qual categoria de plano ele se enquadra.
 
@@ -15,11 +15,11 @@ Toda a lógica fica concentrada na classe `AvaliadorAcademia` (dentro de `app/ac
 
 ---
 
-## 📋 Regras de Negócio
+## Regras de Negócio
 
 ### 1. Cálculo da Mensalidade
 * **Valor Base**: o valor da mensalidade do plano deve ficar entre **R$ 60,00** e **R$ 1.000,00**.
-* **Dependentes**: o titular pode incluir de **0 a 5 dependentes**. Cada dependente adiciona um custo fixo (o padrão é R$ 50,00 por pessoa).
+* **Dependentes**: o titular pode incluir de **0 a 5 dependentes**. Cada dependente adiciona um custo fixo de **R$ 50,00**.
 * **Cupom de Desconto**: pode ser aplicado um cupom percentual de **0% a 50%** sobre o valor total da mensalidade.
 * **Cálculo**: soma-se o valor base com o custo dos dependentes e, sobre esse total, aplica-se o desconto do cupom.
 
@@ -36,7 +36,7 @@ Para manter o sistema seguro e previsível:
 
 ---
 
-## 🧪 Estratégia de Testes
+## Estratégia de Testes
 
 Os testes são organizados em um único arquivo (`tests/test_academia.py`) e cobrem:
 
