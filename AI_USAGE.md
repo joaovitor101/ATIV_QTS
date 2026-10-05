@@ -1,4 +1,4 @@
-# Uso de Inteligência Artificial no Projeto (AI_USAGE.md)
+# Uso de Inteligência Artificial no Projeto
 
 Relatório sobre como utilizei inteligência artificial como apoio no desenvolvimento desta atividade prática de Qualidade e Teste de Software (QTS).
 

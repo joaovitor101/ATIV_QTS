@@ -1,11 +1,8 @@
-# AGENTS.md - Diretrizes de Governança de Agentes Autônomos de IA
-
-Este documento define os limites operacionais, diretrizes arquiteturais e critérios de qualidade a serem seguidos por agentes de IA e desenvolvedores que atuam no repositório `atividade-qts`.
+# Diretrizes de Governança de Agentes Autônomos de IA
 
 ---
 
 ## 1. Contexto do Repositório
-* **Disciplina**: Qualidade e Teste de Software (QTS) - FATEC.
 * **Escopo**: Motor determinístico de cálculo de assinaturas de academia, planos, dependentes, cupons e pagamentos com suíte formal de testes unitários.
 * **Idioma do Projeto**: 100% em português (PT-BR) para arquivos, funções, classes, mensagens de erro e documentação.
 * **Gerenciador de Pacotes**: `uv`.
